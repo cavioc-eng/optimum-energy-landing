@@ -1,76 +1,191 @@
-<!-- CLIENT PORTAL LOGIN & PREVIEW SECTION -->
-<section id="clientPortalSection" class="py-16 px-6 md:px-12 bg-white">
-    <div class="max-w-7xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-            <span class="text-xs uppercase bg-optgold text-optnavy px-3 py-1 rounded-full font-bold tracking-wider">Área Privada y Segura</span>
-            <h2 class="text-3xl font-bold text-optnavy mt-4 mb-3">Portal de Clientes Optimum Home</h2>
-            <p class="text-slate-600">Una vez que converses con nuestro asesor, ingresa aquí con tus credenciales cifradas para revisar los planos de tu instalación y el estudio de ahorro.</p>
-        </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimum Home - Baterías de Respaldo y Tarifas Fijas en Texas</title>
+    <!-- Tailwind CSS CDN for Modern Luxury Design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        optnavy: '#1a2332',
+                        optgold: '#b59e67',
+                        optgoldhover: '#a48d55',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <!-- HEADER / NAVIGATION -->
+    <header class="bg-optnavy text-white px-6 md:px-12 py-5 border-b-4 border-optgold flex justify-between items-center shadow-md">
+        <div class="flex items-center gap-3">
+            <svg width="45" height="45" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="48" fill="#1a2332" stroke="#b59e67" stroke-width="4"/>
+                <path d="M50 25L30 45V75H70V45L50 25Z" fill="#b59e67"/>
+                <circle cx="50" cy="55" r="12" fill="#1a2332"/>
+            </svg>
+            <div>
+                <h1 class="font-bold text-lg tracking-wider text-white leading-none">OPTIMUM HOME</h1>
+                <p id="navSubtitle" class="text-xs text-optgold tracking-[3px] font-semibold mt-1">SOLUCIONES ENERGÉTICAS</p>
+            </div>
+        </div>
+        
+        <div class="flex items-center gap-4">
+            <span id="navCampaign" class="hidden md:inline text-optgold font-semibold text-sm">Campaña de Mercados Desregulados de Texas</span>
+            <!-- Language Toggle Button -->
+            <button onclick="toggleLanguage()" id="langToggleBtn" class="bg-optgold text-optnavy font-bold px-4 py-2 rounded-lg text-sm hover:bg-optgoldhover hover:text-white transition shadow">
+                🇬🇧 English
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="bg-gradient-to-br from-optnavy to-[#2b3a4a] text-white py-16 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            <!-- Login Card Simulation -->
-            <div class="lg:col-span-5 bg-optnavy text-white p-8 rounded-2xl shadow-2xl border-t-4 border-optgold">
-                <div class="flex items-center justify-between mb-6">
-                    <h3 class="font-bold text-xl text-white flex items-center gap-2">
-                        🔒 Acceso Seguro Cifrado
-                    </h3>
-                    <span class="text-xs bg-emerald-500/20 text-emerald-400 px-2.5 py-1 rounded-full font-semibold">SSL 256-bit</span>
+            <!-- Hero Text & Local Battery Image -->
+            <div class="lg:col-span-7 space-y-6">
+                <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
+                    <span id="heroTitle1">Nunca te quedes sin luz.</span> <span id="heroTitle2" class="text-optgold">Baja tu factura mensual de electricidad.</span>
+                </h2>
+                <p id="heroDesc" class="text-lg text-slate-300">
+                    Obtén baterías de respaldo para toda la casa con <strong class="text-white">$0 de inicial</strong> y <strong class="text-white">$0/mes</strong> por el equipo. Cámbiate a nuestro plan de electricidad de tarifa baja y fija en los mercados desregulados de Texas.
+                </p>
+                <ul class="space-y-3 text-slate-200">
+                    <li id="bullet1" class="flex items-center gap-2">✓ <strong>Respaldo total para el hogar</strong> durante apagones</li>
+                    <li id="bullet2" class="flex items-center gap-2">✓ <strong>Tarifa fija garantizada</strong> sin picos de temporada</li>
+                    <li id="bullet3" class="flex items-center gap-2">✓ Funciona incluso si tu casa ya tiene paneles solares</li>
+                </ul>
+
+                <!-- Battery Visual with Local battery.png -->
+                <div class="pt-4">
+                    <p id="featuredLabel" class="text-xs text-optgold uppercase tracking-wider font-bold mb-2">EQUIPO DESTACADO:</p>
+                    <div class="bg-white/10 p-4 rounded-xl border border-optgold/30 inline-flex items-center gap-4">
+                        <div class="bg-white p-2 rounded-xl shadow-md flex items-center justify-center w-20 h-20 border border-slate-200">
+                            <img src="battery.png" alt="Sistema de Batería SolarEdge" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <div>
+                            <p id="equipTitle" class="font-bold text-white">Sistema de Batería SolarEdge</p>
+                            <p id="equipDesc" class="text-xs text-slate-300">Instalado con costo inicial de $0 y $0 de cuota mensual por equipo.</p>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-xs text-slate-300 mb-6">Introduce las credenciales temporales enviadas a tu correo electrónico tras la validación telefónica.</p>
-                
-                <div class="space-y-4">
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-optgold mb-1">Correo Electrónico / Usuario</label>
-                        <input type="email" disabled value="cliente.ejemplo@texasmail.com" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-slate-400 text-sm cursor-not-allowed">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-optgold mb-1">Contraseña Temporal</label>
-                        <input type="password" disabled value="••••••••••••" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-slate-400 text-sm cursor-not-allowed">
-                    </div>
-                    <div class="pt-2">
-                        <button type="button" onclick="alert('Demostración interactiva: Una vez que el cliente inicia sesión, visualiza su estudio técnico personalizado abajo a la derecha.')" class="w-full bg-optgold text-optnavy font-bold py-3 rounded-lg hover:bg-optgoldhover hover:text-white transition shadow text-sm">
-                            Iniciar Sesión en Mi Portal
-                        </button>
-                    </div>
-                </div>
-                <p class="text-[11px] text-slate-400 text-center mt-4">¿Olvidaste tu contraseña? Tu asesor asignado puede reestablecerla de inmediato.</p>
             </div>
 
-            <!-- Simulated Client Dashboard Preview -->
-            <div class="lg:col-span-7 bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
-                <div class="flex justify-between items-center border-b border-slate-200 pb-4">
-                    <div>
-                        <span class="text-xs text-slate-500 font-semibold">ESTADO DEL PROYECTO:</span>
-                        <h4 class="font-bold text-optnavy text-lg">Estudio Técnico Aprobado ✅</h4>
-                    </div>
-                    <span class="text-xs bg-optnavy text-optgold px-3 py-1 rounded-md font-bold">Residencial - Houston, TX</span>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
-                        <p class="text-xs text-slate-500 font-semibold">Batería Asignada</p>
-                        <p class="font-bold text-optnavy text-base mt-1">SolarEdge Home Battery (10kWh)</p>
-                        <p class="text-xs text-emerald-600 font-medium mt-1">Costo de equipo: $0 / mes</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
-                        <p class="text-xs text-slate-500 font-semibold">Ahorro Anual Proyectado</p>
-                        <p class="font-bold text-optgold text-2xl mt-1">$740 / año</p>
-                        <p class="text-xs text-slate-500 mt-1">Tarifa fija garantizada</p>
-                    </div>
-                </div>
-
-                <div class="bg-optnavy/5 p-4 rounded-xl border border-optgold/30 flex items-center justify-between">
-                    <div>
-                        <p class="font-bold text-optnavy text-sm">Documento de Análisis de Factura</p>
-                        <p class="text-xs text-slate-600">Informe_Consumo_SolarEdge_TX.pdf (Cifrado y Confidencial)</p>
-                    </div>
-                    <button onclick="alert('Descarga segura simulada con éxito.')" class="bg-optnavy text-white text-xs font-semibold px-4 py-2 rounded-lg hover:bg-optgold hover:text-optnavy transition">
-                        Descargar Informe
-                    </button>
+            <!-- Lead Capture Form Card with Texas Utility Selector -->
+            <div class="lg:col-span-5">
+                <div class="bg-white text-slate-900 p-8 rounded-2xl shadow-2xl border-t-4 border-optgold">
+                    <h3 id="formTitle" class="text-2xl font-bold text-optnavy mb-2 text-center">Obtén tu Cotización Gratuita</h3>
+                    <p id="formSub" class="text-xs text-slate-500 text-center mb-6">Toma menos de 60 segundos. Sin compromiso.</p>
+                    
+                    <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+                        <div>
+                            <label id="labelName" class="block font-semibold text-sm mb-1 text-slate-700">Nombre Completo</label>
+                            <input type="text" name="name" required placeholder="John Doe" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-optgold focus:outline-none">
+                        </div>
+                        <div>
+                            <label id="labelPhone" class="block font-semibold text-sm mb-1 text-slate-700">Número de Teléfono</label>
+                            <input type="tel" name="phone" required placeholder="(713) 000-0000" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-optgold focus:outline-none">
+                        </div>
+                        <div>
+                            <label id="labelAddress" class="block font-semibold text-sm mb-1 text-slate-700">Dirección en Texas y Código Postal</label>
+                            <input type="text" name="address" required placeholder="123 Main St, Houston, TX 77338" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-optgold focus:outline-none">
+                        </div>
+                        <div>
+                            <label id="labelUtility" class="block font-semibold text-sm mb-1 text-slate-700">Compañía Eléctrica Actual (TDSP)</label>
+                            <select name="utility" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-optgold focus:outline-none bg-white">
+                                <option>CenterPoint Energy</option>
+                                <option>Oncor Electric Delivery</option>
+                                <option>AEP Texas</option>
+                                <option>TNMP (Texas-New Mexico Power)</option>
+                                <option>Otra / Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label id="labelBill" class="block font-semibold text-sm mb-1 text-slate-700">Factura Eléctrica Mensual Promedio</label>
+                            <select name="bill" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-optgold focus:outline-none bg-white">
+                                <option>$150 - $250 / mo</option>
+                                <option>$250 - $400 / mo</option>
+                                <option>$400+ / mo</option>
+                            </select>
+                        </div>
+                        <button type="submit" id="btnSubmit" class="w-full bg-optgold text-optnavy font-bold py-4 rounded-lg hover:bg-optgoldhover hover:text-white transition shadow-lg mt-2 text-base">
+                            Reclamar Mis Baterías Gratis
+                        </button>
+                    </form>
                 </div>
             </div>
 
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- SECURE PROCESS & DATA CONFIDENTIALITY -->
+    <section class="py-16 px-6 md:px-12 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span id="badgeSecurity" class="text-xs uppercase bg-optnavy text-optgold px-3 py-1 rounded-full font-bold tracking-wider">Compromiso de Privacidad y Seriedad</span>
+                <h2 id="secTitle" class="text-3xl font-bold text-optnavy mt-4 mb-3">¿Cómo Trabajamos con tu Información?</h2>
+                <p id="secSub" class="text-slate-600">Garantizamos absoluta confidencialidad. Diseñamos un proceso humano y seguro para proteger tus datos en todo momento.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 relative">
+                    <div class="text-optgold font-extrabold text-4xl mb-4">01</div>
+                    <h3 id="step1Title" class="font-bold text-lg text-optnavy mb-2">Registro Rápido</h3>
+                    <p id="step1Desc" class="text-sm text-slate-600">Nos dejas tus datos básicos de contacto en el formulario sin compromiso ni documentos delicados.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 relative">
+                    <div class="text-optgold font-extrabold text-4xl mb-4">02</div>
+                    <h3 id="step2Title" class="font-bold text-lg text-optnavy mb-2">Asesoría y Acceso Seguro</h3>
+                    <p id="step2Desc" class="text-sm text-slate-600">Un especialista de Optimum se comunica contigo, valida tu interés y te otorga credenciales a un portal cifrado.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 relative">
+                    <div class="text-optgold font-extrabold text-4xl mb-4">03</div>
+                    <h3 id="step3Title" class="font-bold text-lg text-optnavy mb-2">Estudio Técnico Confidencial</h3>
+                    <p id="step3Desc" class="text-sm text-slate-600">Envías tu factura o historial de consumo dentro de tu área protegida para dimensionar tu sistema de respaldo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENT PORTAL LOGIN & PREVIEW SECTION -->
+    <section id="clientPortalSection" class="py-16 px-6 md:px-12 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs uppercase bg-optgold text-optnavy px-3 py-1 rounded-full font-bold tracking-wider">Área Privada y Segura</span>
+                <h2 class="text-3xl font-bold text-optnavy mt-4 mb-3">Portal de Clientes Optimum Home</h2>
+                <p class="text-slate-600">Una vez que converses con nuestro asesor, ingresa aquí con tus credenciales cifradas para revisar los planos de tu instalación y el estudio de ahorro.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Login Card Simulation -->
+                <div class="lg:col-span-5 bg-optnavy text-white p-8 rounded-2xl shadow-2xl border-t-4 border-optgold">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-bold text-xl text-white flex items-center gap-2">
+                            🔒 Acceso Seguro Cifrado
+                        </h3>
+                        <span class="text-xs bg-emerald-500/20 text-emerald-400 px-2.5 py-1 rounded-full font-semibold">SSL 256-bit</span>
+                    </div>
+                    <p class="text-xs text-slate-300 mb-6">Introduce las credenciales temporales enviadas a tu correo electrónico tras la validación telefónica.</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-optgold mb-1">Correo Electrónico / Usuario</label>
+                            <input type="email" disabled value="cliente.ejemplo@texasmail.com" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-slate-400 text-sm cursor-not-allowed">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-optgold mb-1">Contraseña Temporal</label>
+                            <input type="password" disabled value="••••••••••••" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-slate-400 text-sm cursor-not-allowed">
+                        </div>
+                        <div class="pt-2">
+                            <button type="button" onclick="alert('Demostración interactiva: Una vez que el cliente inicia sesión, visualiza su estudio técnico personalizado abajo a la derecha.')" class="w-full bg
