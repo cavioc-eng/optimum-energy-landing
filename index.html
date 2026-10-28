@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Optimum Home - Free Backup Batteries & Lower Energy Rates in Texas</title>
+    <title>Optimum Home - Baterías de Respaldo y Tarifas Fijas en Texas</title>
     <!-- Tailwind CSS CDN for Modern Luxury Design -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -49,7 +49,7 @@
     <section class="bg-gradient-to-br from-optnavy to-[#2b3a4a] text-white py-16 px-6 md:px-12">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            <!-- Hero Text & Local Battery Image Gancho -->
+            <!-- Hero Text & Local Battery Image -->
             <div class="lg:col-span-7 space-y-6">
                 <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
                     <span id="heroTitle1">Nunca te quedes sin luz.</span> <span id="heroTitle2" class="text-optgold">Baja tu factura mensual de electricidad.</span>
@@ -63,7 +63,7 @@
                     <li id="bullet3" class="flex items-center gap-2">✓ Funciona incluso si tu casa ya tiene paneles solares</li>
                 </ul>
 
-                <!-- Battery Visual Gancho with Local battery.png -->
+                <!-- Battery Visual with Local battery.png -->
                 <div class="pt-4">
                     <p id="featuredLabel" class="text-xs text-optgold uppercase tracking-wider font-bold mb-2">EQUIPO DESTACADO:</p>
                     <div class="bg-white/10 p-4 rounded-xl border border-optgold/30 inline-flex items-center gap-4">
@@ -78,7 +78,7 @@
                 </div>
             </div>
 
-            <!-- Lead Capture Form Card -->
+            <!-- Lead Capture Form Card with Texas Utility Selector -->
             <div class="lg:col-span-5">
                 <div class="bg-white text-slate-900 p-8 rounded-2xl shadow-2xl border-t-4 border-optgold">
                     <h3 id="formTitle" class="text-2xl font-bold text-optnavy mb-2 text-center">Obtén tu Cotización Gratuita</h3>
@@ -98,6 +98,16 @@
                             <input type="text" name="address" required placeholder="123 Main St, Houston, TX 77338" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-optgold focus:outline-none">
                         </div>
                         <div>
+                            <label id="labelUtility" class="block font-semibold text-sm mb-1 text-slate-700">Compañía Eléctrica Actual (TDSP)</label>
+                            <select name="utility" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-optgold focus:outline-none bg-white">
+                                <option>CenterPoint Energy</option>
+                                <option>Oncor Electric Delivery</option>
+                                <option>AEP Texas</option>
+                                <option>TNMP (Texas-New Mexico Power)</option>
+                                <option>Otra / Other</option>
+                            </select>
+                        </div>
+                        <div>
                             <label id="labelBill" class="block font-semibold text-sm mb-1 text-slate-700">Factura Eléctrica Mensual Promedio</label>
                             <select name="bill" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-optgold focus:outline-none bg-white">
                                 <option>$150 - $250 / mo</option>
@@ -112,6 +122,38 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <!-- NEW SECTION: SECURE PROCESS & DATA CONFIDENTIALITY -->
+    <section class="py-16 px-6 md:px-12 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span id="badgeSecurity" class="text-xs uppercase bg-optnavy text-optgold px-3 py-1 rounded-full font-bold tracking-wider">Compromiso de Privacidad y Seriedad</span>
+                <h2 id="secTitle" class="text-3xl font-bold text-optnavy mt-4 mb-3">¿Cómo Trabajamos con tu Información?</h2>
+                <p id="secSub" class="text-slate-600">Garantizamos absoluta confidencialidad. Diseñamos un proceso humano y seguro para proteger tus datos en todo momento.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 relative">
+                    <div class="text-optgold font-extrabold text-4xl mb-4">01</div>
+                    <h3 id="step1Title" class="font-bold text-lg text-optnavy mb-2">Registro Rápido</h3>
+                    <p id="step1Desc" class="text-sm text-slate-600">Nos dejas tus datos básicos de contacto en el formulario sin compromiso ni documentos delicados.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 relative">
+                    <div class="text-optgold font-extrabold text-4xl mb-4">02</div>
+                    <h3 id="step2Title" class="font-bold text-lg text-optnavy mb-2">Asesoría y Acceso Seguro</h3>
+                    <p id="step2Desc" class="text-sm text-slate-600">Un especialista de Optimum se comunica contigo, valida tu interés y te otorga credenciales a un portal cifrado.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 relative">
+                    <div class="text-optgold font-extrabold text-4xl mb-4">03</div>
+                    <h3 id="step3Title" class="font-bold text-lg text-optnavy mb-2">Estudio Técnico Confidencial</h3>
+                    <p id="step3Desc" class="text-sm text-slate-600">Envías tu factura o historial de consumo dentro de tu área protegida para dimensionar tu sistema de respaldo.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -183,8 +225,18 @@
                 labelName: "Nombre Completo",
                 labelPhone: "Número de Teléfono",
                 labelAddress: "Dirección en Texas y Código Postal",
+                labelUtility: "Compañía Eléctrica Actual (TDSP)",
                 labelBill: "Factura Eléctrica Mensual Promedio",
                 btnSubmit: "Reclamar Mis Baterías Gratis",
+                badgeSecurity: "Compromiso de Privacidad y Seriedad",
+                secTitle: "¿Cómo Trabajamos con tu Información?",
+                secSub: "Garantizamos absoluta confidencialidad. Diseñamos un proceso humano y seguro para proteger tus datos en todo momento.",
+                step1Title: "Registro Rápido",
+                step1Desc: "Nos dejas tus datos básicos de contacto en el formulario sin compromiso ni documentos delicados.",
+                step2Title: "Asesoría y Acceso Seguro",
+                step2Desc: "Un especialista de Optimum se comunica contigo, valida tu interés y te otorga credenciales a un portal cifrado.",
+                step3Title: "Estudio Técnico Confidencial",
+                step3Desc: "Envías tu factura o historial de consumo dentro de tu área protegida para dimensionar tu sistema de respaldo.",
                 calcTitle: "Calcula tu Ahorro Energético Estimado en Texas",
                 calcSub: "Desliza para igualar tu factura mensual promedio actual y descubre cuánto ahorras con nuestra tarifa fija.",
                 calcLabel: "Factura Eléctrica Mensual Actual:",
@@ -212,8 +264,18 @@
                 labelName: "Full Name",
                 labelPhone: "Phone Number",
                 labelAddress: "Texas Property Address & Zip",
+                labelUtility: "Current Electric Provider (TDSP)",
                 labelBill: "Average Monthly Electric Bill",
                 btnSubmit: "Claim My Free Batteries",
+                badgeSecurity: "Privacy & Professional Commitment",
+                secTitle: "How We Handle Your Information",
+                secSub: "Absolute confidentiality guaranteed. We designed a human and secure process to protect your data at all times.",
+                step1Title: "Quick Registration",
+                step1Desc: "Leave us your basic contact details in the form with no obligation and no sensitive documents required.",
+                step2Title: "Advisory & Secure Access",
+                step2Desc: "An Optimum specialist contacts you, validates your interest, and provides credentials to an encrypted portal.",
+                step3Title: "Confidential Technical Study",
+                step3Desc: "You submit your bill or consumption history inside your protected area to size your backup system.",
                 calcTitle: "Calculate Your Estimated Texas Energy Savings",
                 calcSub: "Slide to match your current average monthly electric bill and see how much you save with our fixed rate.",
                 calcLabel: "Current Monthly Electric Bill:",
@@ -232,6 +294,7 @@
             currentLang = currentLang === 'es' ? 'en' : 'es';
             const t = translations[currentLang];
 
+            document.getElementById('navSubtitleinnerHTML').innerHTML = t.navSubtitle; // safety
             document.getElementById('navSubtitle').innerHTML = t.navSubtitle;
             document.getElementById('navCampaign').innerHTML = t.navCampaign;
             document.getElementById('heroTitle1').innerHTML = t.heroTitle1;
@@ -248,8 +311,18 @@
             document.getElementById('labelName').innerHTML = t.labelName;
             document.getElementById('labelPhone').innerHTML = t.labelPhone;
             document.getElementById('labelAddress').innerHTML = t.labelAddress;
+            document.getElementById('labelUtility').innerHTML = t.labelUtility;
             document.getElementById('labelBill').innerHTML = t.labelBill;
             document.getElementById('btnSubmit').innerHTML = t.btnSubmit;
+            document.getElementById('badgeSecurity').innerHTML = t.badgeSecurity;
+            document.getElementById('secTitle').innerHTML = t.secTitle;
+            document.getElementById('secSub').innerHTML = t.secSub;
+            document.getElementById('step1Title').innerHTML = t.step1Title;
+            document.getElementById('step1Desc').innerHTML = t.step1Desc;
+            document.getElementById('step2Title').innerHTML = t.step2Title;
+            document.getElementById('step2Desc').innerHTML = t.step2Desc;
+            document.getElementById('step3Title').innerHTML = t.step3Title;
+            document.getElementById('step3Desc').innerHTML = t.step3Desc;
             document.getElementById('calcTitle').innerHTML = t.calcTitle;
             document.getElementById('calcSub').innerHTML = t.calcSub;
             document.getElementById('calcLabel').innerHTML = t.calcLabel;
