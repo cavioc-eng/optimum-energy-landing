@@ -188,4 +188,247 @@
                             <input type="password" disabled value="••••••••••••" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-slate-400 text-sm cursor-not-allowed">
                         </div>
                         <div class="pt-2">
-                            <button type="button" onclick="alert('Demostración interactiva: Una vez que el cliente inicia sesión, visualiza su estudio técnico personalizado abajo a la derecha.')" class="w-full bg
+                            <button type="button" onclick="alert('Demostración interactiva: Una vez que el cliente inicia sesión, visualiza su estudio técnico personalizado abajo a la derecha.')" class="w-full bg-optgold text-optnavy font-bold py-3 rounded-lg hover:bg-optgoldhover hover:text-white transition shadow text-sm">
+                                Iniciar Sesión en Mi Portal
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-[11px] text-slate-400 text-center mt-4">¿Olvidaste tu contraseña? Tu asesor asignado puede reestablecerla de inmediato.</p>
+                </div>
+
+                <!-- Simulated Client Dashboard Preview -->
+                <div class="lg:col-span-7 bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+                    <div class="flex justify-between items-center border-b border-slate-200 pb-4">
+                        <div>
+                            <span class="text-xs text-slate-500 font-semibold">ESTADO DEL PROYECTO:</span>
+                            <h4 class="font-bold text-optnavy text-lg">Estudio Técnico Aprobado ✅</h4>
+                        </div>
+                        <span class="text-xs bg-optnavy text-optgold px-3 py-1 rounded-md font-bold">Residencial - Houston, TX</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                            <p class="text-xs text-slate-500 font-semibold">Batería Asignada</p>
+                            <p class="font-bold text-optnavy text-base mt-1">SolarEdge Home Battery (10kWh)</p>
+                            <p class="text-xs text-emerald-600 font-medium mt-1">Costo de equipo: $0 / mes</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                            <p class="text-xs text-slate-500 font-semibold">Ahorro Anual Proyectado</p>
+                            <p class="font-bold text-optgold text-2xl mt-1">$740 / año</p>
+                            <p class="text-xs text-slate-500 mt-1">Tarifa fija garantizada</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-optnavy/5 p-4 rounded-xl border border-optgold/30 flex items-center justify-between">
+                        <div>
+                            <p class="font-bold text-optnavy text-sm">Documento de Análisis de Factura</p>
+                            <p class="text-xs text-slate-600">Informe_Consumo_SolarEdge_TX.pdf (Cifrado y Confidencial)</p>
+                        </div>
+                        <button onclick="alert('Descarga segura simulada con éxito.')" class="bg-optnavy text-white text-xs font-semibold px-4 py-2 rounded-lg hover:bg-optgold hover:text-optnavy transition">
+                            Descargar Informe
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE SAVINGS CALCULATOR SECTION -->
+    <section class="py-16 px-6 md:px-12 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 id="calcTitle" class="text-3xl font-bold text-optnavy mb-4">Calcula tu Ahorro Energético Estimado en Texas</h2>
+            <p id="calcSub" class="text-slate-600 mb-10">Desliza para igualar tu factura mensual promedio actual y descubre cuánto ahorras con nuestra tarifa fija.</p>
+
+            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-inner">
+                <div class="mb-6">
+                    <label class="block text-lg font-semibold text-slate-700 mb-2">
+                        <span id="calcLabel">Factura Eléctrica Mensual Actual:</span> <span id="billValue" class="text-optgold font-bold text-2xl">$250</span>
+                    </label>
+                    <input type="range" id="billSlider" min="100" max="600" step="10" value="250" class="w-full h-3 bg-slate-300 rounded-lg appearance-none cursor-pointer accent-optgold">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    <div class="bg-optnavy text-white p-6 rounded-xl shadow">
+                        <p id="monthlyTitle" class="text-xs uppercase tracking-wider text-optgold font-semibold">Ahorro Mensual Estimado</p>
+                        <p id="monthlySavings" class="text-4xl font-extrabold mt-2">$55 /mo</p>
+                    </div>
+                    <div class="bg-optnavy text-white p-6 rounded-xl shadow">
+                        <p id="annualTitle" class="text-xs uppercase tracking-wider text-optgold font-semibold">Ahorro Anual Estimado</p>
+                        <p id="annualSavings" class="text-4xl font-extrabold mt-2">$660 /yr</p>
+                    </div>
+                </div>
+                <p id="calcNote" class="text-xs text-slate-400 mt-4">*Cálculos basados en tarifas promedio minoristas desreguladas de Texas en comparación con planes fijos de Optimum Home con tarifa de batería de $0.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-optnavy text-slate-400 py-10 px-6 md:px-12 border-t-2 border-optgold">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <div class="bg-optgold p-2 rounded-full">
+                    <svg width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 20L25 45V75H75V45L50 20Z" fill="#1a2332"/>
+                        <circle cx="50" cy="55" r="10" fill="#b59e67"/>
+                    </svg>
+                </div>
+                <span class="font-bold text-white text-base">OPTIMUM HOME</span>
+            </div>
+            <div class="text-center md:text-right space-y-1 text-sm">
+                <p id="footerTag" class="text-optgold font-semibold">Integración de Rutas y Leads de Campo</p>
+                <p id="footerCopy">&copy; 2026 Campaña de Energía Optimum Home. Todos los derechos reservados. Mercados desregulados de Texas.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FOR CALCULATOR & BILINGUAL TOGGLE -->
+    <script>
+        const translations = {
+            es: {
+                navSubtitle: "SOLUCIONES ENERGÉTICAS",
+                navCampaign: "Campaña de Mercados Desregulados de Texas",
+                heroTitle1: "Nunca te quedes sin luz.",
+                heroTitle2: "Baja tu factura mensual de electricidad.",
+                heroDesc: "Obtén baterías de respaldo para toda la casa con <strong>$0 de inicial</strong> y <strong>$0/mes</strong> por el equipo. Cámbiate a nuestro plan de electricidad de tarifa baja y fija en los mercados desregulados de Texas.",
+                bullet1: "<strong>Respaldo total para el hogar</strong> durante apagones",
+                bullet2: "<strong>Tarifa fija garantizada</strong> sin picos de temporada",
+                bullet3: "Funciona incluso si tu casa ya tiene paneles solares",
+                featuredLabel: "EQUIPO DESTACADO:",
+                equipTitle: "Sistema de Batería SolarEdge",
+                equipDesc: "Instalado con costo inicial de $0 y $0 de cuota mensual por equipo.",
+                formTitle: "Obtén tu Cotización Gratuita",
+                formSub: "Toma menos de 60 segundos. Sin compromiso.",
+                labelName: "Nombre Completo",
+                labelPhone: "Número de Teléfono",
+                labelAddress: "Dirección en Texas y Código Postal",
+                labelUtility: "Compañía Eléctrica Actual (TDSP)",
+                labelBill: "Factura Eléctrica Mensual Promedio",
+                btnSubmit: "Reclamar Mis Baterías Gratis",
+                badgeSecurity: "Compromiso de Privacidad y Seriedad",
+                secTitle: "¿Cómo Trabajamos con tu Información?",
+                secSub: "Garantizamos absoluta confidencialidad. Diseñamos un proceso humano y seguro para proteger tus datos en todo momento.",
+                step1Title: "Registro Rápido",
+                step1Desc: "Nos dejas tus datos básicos de contacto en el formulario sin compromiso ni documentos delicados.",
+                step2Title: "Asesoría y Acceso Seguro",
+                step2Desc: "Un especialista de Optimum se comunica contigo, valida tu interés y te otorga credenciales a un portal cifrado.",
+                step3Title: "Estudio Técnico Confidencial",
+                step3Desc: "Envías tu factura o historial de consumo dentro de tu área protegida para dimensionar tu sistema de respaldo.",
+                calcTitle: "Calcula tu Ahorro Energético Estimado en Texas",
+                calcSub: "Desliza para igualar tu factura mensual promedio actual y descubre cuánto ahorras con nuestra tarifa fija.",
+                calcLabel: "Factura Eléctrica Mensual Actual:",
+                monthlyTitle: "Ahorro Mensual Estimado",
+                annualTitle: "Ahorro Anual Estimado",
+                calcNote: "*Cálculos basados en tarifas promedio minoristas desreguladas de Texas en comparación con planes fijos de Optimum Home con tarifa de batería de $0.",
+                footerTag: "Integración de Rutas y Leads de Campo",
+                footerCopy: "&copy; 2026 Campaña de Energía Optimum Home. Todos los derechos reservados. Mercados desregulados de Texas.",
+                langBtn: "🇬🇧 English"
+            },
+            en: {
+                navSubtitle: "ENERGY SOLUTIONS",
+                navCampaign: "Texas Deregulated Markets Campaign",
+                heroTitle1: "Never Lose Power.",
+                heroTitle2: "Lower Your Monthly Electric Bill.",
+                heroDesc: "Get whole-home backup batteries with <strong>$0 down</strong> and <strong>$0/month</strong> for the equipment. Simply switch to our low, fixed-rate electricity plan in deregulated Texas markets.",
+                bullet1: "<strong>100% Whole-Home Backup</strong> during grid outages",
+                bullet2: "<strong>Guaranteed Fixed Rate</strong> with no seasonal spikes",
+                bullet3: "Works even if your home already has solar panels",
+                featuredLabel: "FEATURED EQUIPMENT:",
+                equipTitle: "SolarEdge Backup Battery System",
+                equipDesc: "Installed with $0 initial cost & $0 monthly equipment fee.",
+                formTitle: "Get Your Free Savings Quote",
+                formSub: "Takes less than 60 seconds. No obligation.",
+                labelName: "Full Name",
+                labelPhone: "Phone Number",
+                labelAddress: "Texas Property Address & Zip",
+                labelUtility: "Current Electric Provider (TDSP)",
+                labelBill: "Average Monthly Electric Bill",
+                btnSubmit: "Claim My Free Batteries",
+                badgeSecurity: "Privacy & Professional Commitment",
+                secTitle: "How We Handle Your Information",
+                secSub: "Absolute confidentiality guaranteed. We designed a human and secure process to protect your data at all times.",
+                step1Title: "Quick Registration",
+                step1Desc: "Leave us your basic contact details in the form with no obligation and no sensitive documents required.",
+                step2Title: "Advisory & Secure Access",
+                step2Desc: "An Optimum specialist contacts you, validates your interest, and provides credentials to an encrypted portal.",
+                step3Title: "Confidential Technical Study",
+                step3Desc: "You submit your bill or consumption history inside your protected area to size your backup system.",
+                calcTitle: "Calculate Your Estimated Texas Energy Savings",
+                calcSub: "Slide to match your current average monthly electric bill and see how much you save with our fixed rate.",
+                calcLabel: "Current Monthly Electric Bill:",
+                monthlyTitle: "Estimated Monthly Savings",
+                annualTitle: "Estimated Annual Savings",
+                calcNote: "*Calculations based on average deregulated Texas retail rates compared to Optimum Home fixed plans with $0 battery fee.",
+                footerTag: "Corporate Field Route & Lead Integration",
+                footerCopy: "&copy; 2026 Optimum Home Energy Campaign. All rights reserved. Deregulated Texas Markets.",
+                langBtn: "🇪🇸 Español"
+            }
+        };
+
+        let currentLang = 'es';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            const t = translations[currentLang];
+
+            document.getElementById('navSubtitle').innerHTML = t.navSubtitle;
+            document.getElementById('navCampaign').innerHTML = t.navCampaign;
+            document.getElementById('heroTitle1').innerHTML = t.heroTitle1;
+            document.getElementById('heroTitle2').innerHTML = t.heroTitle2;
+            document.getElementById('heroDesc').innerHTML = t.heroDesc;
+            document.getElementById('bullet1').innerHTML = t.bullet1;
+            document.getElementById('bullet2').innerHTML = t.bullet2;
+            document.getElementById('bullet3').innerHTML = t.bullet3;
+            document.getElementById('featuredLabel').innerHTML = t.featuredLabel;
+            document.getElementById('equipTitle').innerHTML = t.equipTitle;
+            document.getElementById('equipDesc').innerHTML = t.equipDesc;
+            document.getElementById('formTitle').innerHTML = t.formTitle;
+            document.getElementById('formSub').innerHTML = t.formSub;
+            document.getElementById('labelName').innerHTML = t.labelName;
+            document.getElementById('labelPhone').innerHTML = t.labelPhone;
+            document.getElementById('labelAddress').innerHTML = t.labelAddress;
+            document.getElementById('labelUtility').innerHTML = t.labelUtility;
+            document.getElementById('labelBill').innerHTML = t.labelBill;
+            document.getElementById('btnSubmit').innerHTML = t.btnSubmit;
+            document.getElementById('badgeSecurity').innerHTML = t.badgeSecurity;
+            document.getElementById('secTitle').innerHTML = t.secTitle;
+            document.getElementById('secSub').innerHTML = t.secSub;
+            document.getElementById('step1Title').innerHTML = t.step1Title;
+            document.getElementById('step1Desc').innerHTML = t.step1Desc;
+            document.getElementById('step2Title').innerHTML = t.step2Title;
+            document.getElementById('step2Desc').innerHTML = t.step2Desc;
+            document.getElementById('step3Title').innerHTML = t.step3Title;
+            document.getElementById('step3Desc').innerHTML = t.step3Desc;
+            document.getElementById('calcTitle').innerHTML = t.calcTitle;
+            document.getElementById('calcSub').innerHTML = t.calcSub;
+            document.getElementById('calcLabel').innerHTML = t.calcLabel;
+            document.getElementById('monthlyTitle').innerHTML = t.monthlyTitle;
+            document.getElementById('annualTitle').innerHTML = t.annualTitle;
+            document.getElementById('calcNote').innerHTML = t.calcNote;
+            document.getElementById('footerTag').innerHTML = t.footerTag;
+            document.getElementById('footerCopy').innerHTML = t.footerCopy;
+            document.getElementById('langToggleBtn').innerHTML = t.langBtn;
+        }
+
+        const billSlider = document.getElementById('billSlider');
+        const billValue = document.getElementById('billValue');
+        const monthlySavings = document.getElementById('monthlySavings');
+        const annualSavings = document.getElementById('annualSavings');
+
+        function updateCalculator(val) {
+            billValue.textContent = '$' + val;
+            const savings = Math.round(val * 0.22);
+            const annual = savings * 12;
+            monthlySavings.textContent = '$' + savings + ' /mo';
+            annualSavings.textContent = '$' + annual + ' /yr';
+        }
+
+        billSlider.addEventListener('input', (e) => {
+            updateCalculator(e.target.value);
+        });
+
+        updateCalculator(billSlider.value);
+    </script>
+
+</body>
+</html>
