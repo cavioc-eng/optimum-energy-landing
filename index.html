@@ -400,4 +400,124 @@
                 loginHelp: "Forgot your password? Your assigned advisor can reset it immediately.",
                 projStatusLabel: "PROJECT STATUS:",
                 projStatusTitle: "Technical Study Approved ✅",
-                battAssignedLabel: "Ass
+                battAssignedLabel: "Assigned Battery",
+                battCostLabel: "Equipment cost: $0 / mo",
+                annualSavingsLabel: "Projected Annual Savings",
+                annualUnit: "/ year",
+                fixedRateLabel: "Guaranteed fixed rate",
+                uploadBoxTitle: "📂 Upload Electric Bill (Confidential)",
+                uploadBoxDesc: "Upload your bill in PDF or photo (max 10 MB) for exact technical sizing.",
+                uploadBtnText: "Upload File",
+                docAnalysisTitle: "Bill Analysis Document",
+                docAnalysisSub: "Informe_Consumo_SolarEdge_TX.pdf (Encrypted & Confidential)",
+                downloadBtnText: "Download Report",
+                calcTitle: "Calculate Your Estimated Texas Energy Savings",
+                calcSub: "Slide to match your current average monthly electric bill and see how much you save with our fixed rate.",
+                calcLabel: "Current Monthly Electric Bill:",
+                monthlyTitle: "Estimated Monthly Savings",
+                annualTitle: "Estimated Annual Savings",
+                calcNote: "*Calculations based on average deregulated Texas retail rates compared to Optimum Home fixed plans with $0 battery fee.",
+                footerTag: "Corporate Field Route & Lead Integration",
+                footerCopy: "&copy; 2026 Optimum Home Energy Campaign. All rights reserved. Deregulated Texas Markets.",
+                langBtn: "🇪🇸 Español"
+            }
+        };
+
+        let currentLang = 'es';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            const t = translations[currentLang];
+
+            function updateText(id, text) {
+                const el = document.getElementById(id);
+                if (el) el.innerHTML = text;
+            }
+
+            updateText('navSubtitle', t.navSubtitle);
+            updateText('navCampaign', t.navCampaign);
+            updateText('heroTitle1', t.heroTitle1);
+            updateText('heroTitle2', t.heroTitle2);
+            updateText('heroDesc', t.heroDesc);
+            updateText('bullet1', t.bullet1);
+            updateText('bullet2', t.bullet2);
+            updateText('bullet3', t.bullet3);
+            updateText('featuredLabel', t.featuredLabel);
+            updateText('equipTitle', t.equipTitle);
+            updateText('equipDesc', t.equipDesc);
+            updateText('formTitle', t.formTitle);
+            updateText('formSub', t.formSub);
+            updateText('labelName', t.labelName);
+            updateText('labelPhone', t.labelPhone);
+            updateText('labelAddress', t.labelAddress);
+            updateText('labelUtility', t.labelUtility);
+            updateText('labelBill', t.labelBill);
+            updateText('btnSubmit', t.btnSubmit);
+            updateText('badgeSecurity', t.badgeSecurity);
+            updateText('secTitle', t.secTitle);
+            updateText('secSub', t.secSub);
+            updateText('step1Title', t.step1Title);
+            updateText('step1Desc', t.step1Desc);
+            updateText('step2Title', t.step2Title);
+            updateText('step2Desc', t.step2Desc);
+            updateText('step3Title', t.step3Title);
+            updateText('step3Desc', t.step3Desc);
+            
+            updateText('portalBadge', t.portalBadge);
+            updateText('portalMainTitle', t.portalMainTitle);
+            updateText('portalMainDesc', t.portalMainDesc);
+            updateText('loginCardTitle', t.loginCardTitle);
+            updateText('loginCardDesc', t.loginCardDesc);
+            updateText('loginUserLabel', t.loginUserLabel);
+            updateText('loginPassLabel', t.loginPassLabel);
+            updateText('loginBtnText', t.loginBtnText);
+            updateText('loginHelp', t.loginHelp);
+            updateText('projStatusLabel', t.projStatusLabel);
+            updateText('projStatusTitle', t.projStatusTitle);
+            updateText('battAssignedLabel', t.battAssignedLabel);
+            updateText('battCostLabel', t.battCostLabel);
+            updateText('annualSavingsLabel', t.annualSavingsLabel);
+            updateText('annualUnit', t.annualUnit);
+            updateText('fixedRateLabel', t.fixedRateLabel);
+            updateText('uploadBoxTitle', t.uploadBoxTitle);
+            updateText('uploadBoxDesc', t.uploadBoxDesc);
+            updateText('uploadBtnText', t.uploadBtnText);
+            updateText('docAnalysisTitle', t.docAnalysisTitle);
+            updateText('docAnalysisSub', t.docAnalysisSub);
+            updateText('downloadBtnText', t.downloadBtnText);
+
+            updateText('calcTitle', t.calcTitle);
+            updateText('calcSub', t.calcSub);
+            updateText('calcLabel', t.calcLabel);
+            updateText('monthlyTitle', t.monthlyTitle);
+            updateText('annualTitle', t.annualTitle);
+            updateText('calcNote', t.calcNote);
+            updateText('footerTag', t.footerTag);
+            updateText('footerCopy', t.footerCopy);
+            updateText('langToggleBtn', t.langBtn);
+        }
+
+        const billSlider = document.getElementById('billSlider');
+        const billValue = document.getElementById('billValue');
+        const monthlySavings = document.getElementById('monthlySavings');
+        const annualSavings = document.getElementById('annualSavings');
+
+        if (billSlider) {
+            function updateCalculator(val) {
+                if (billValue) billValue.textContent = '$' + val;
+                const savings = Math.round(val * 0.22);
+                const annual = savings * 12;
+                if (monthlySavings) monthlySavings.textContent = '$' + savings + ' /mo';
+                if (annualSavings) annualSavings.textContent = '$' + annual + ' /yr';
+            }
+
+            billSlider.addEventListener('input', (e) => {
+                updateCalculator(e.target.value);
+            });
+
+            updateCalculator(billSlider.value);
+        }
+    </script>
+
+</body>
+</html>
